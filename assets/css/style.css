@@ -56,7 +56,7 @@ a,a:hover,a:active,a:focus {
 }
 h1,h2,h3,h4,h5,h6 { 
 	margin: 0;
-	color:#43485c;
+	color:#0060c7;
     font-size: 16px;
 	font-family: 'Poppins', sans-serif;
 	text-transform: capitalize;
@@ -215,7 +215,7 @@ nav.navbar.bootsnav .navbar-toggle i{color: #007bff;}
 }
 .header-text h2 span {color: #007bff;}
 .header-text p {
-    color: #fff;
+    color: #bce0ff;
     font-size: 20px;
     font-weight: 300;
     text-transform: uppercase;
@@ -695,7 +695,7 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
 .single-contact-box {padding-top: 100px;}
 .contact-form  .form-group {
     margin-bottom: 20px;
-    
+    box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
 }
 .contact-form .form-control {
     padding: 25px;
@@ -843,7 +843,35 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
 
 }
 
+a:hover {
+    color: #a3d4ff;
+}
 
+li a i:hover {
+    color: #0060c7;
+}
+
+#successMessage {
+    color: #22cd22;
+    line-height: 4em;
+    text-align: center;
+}
+
+.hm-footer-copyright.text-center a:hover {
+    color: #0060c7;
+}
+
+.contact-add-head h3 {
+    color: #0060c7;
+}
+
+.single-about-add-info h3 {
+	color: #0060c7;
+}
+
+.single-contact-add-info h3{
+	color: #0060c7;
+}
 
 #scroll-Top  .return-to-top i{
     position: relative;

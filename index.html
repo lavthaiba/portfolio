@@ -78,12 +78,12 @@
 			            <div class="collapse navbar-collapse menu-ui-design" id="navbar-menu">
 			                <ul class="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
 			                <li class=" smooth-menu active"></li>
+								<li class=" smooth-menu"><a href="#about">about</a></li>
 			                    <li class=" smooth-menu"><a href="#education">education</a></li>
 			                    <li class="smooth-menu"><a href="#skills">skills</a></li>
 			                    <li class="smooth-menu"><a href="#experience">experience</a></li>
 			                    <li class="smooth-menu"><a href="#profiles">profile</a></li>
-			                    <li class="smooth-menu"><a href="#portfolio">portfolio</a></li>
-			                    <li class="smooth-menu"><a href="#clients">clients</a></li>
+			                    
 			                    <li class="smooth-menu"><a href="#contact">contact</a></li>
 			                </ul><!--/.nav -->
 			            </div><!-- /.navbar-collapse -->
@@ -104,7 +104,7 @@
 					<div class="col-md-12 text-center">
 						<div class="header-text">
 							<h2>hi <span>,</span> I am <br> Lav <br> Thaiba <span>.</span>   </h2>
-							<p>Founder | Ideator | Quality Assurance Engineer</p>
+							<p>Founder | Ideator | Software Quality Assurance Engineer</p>
 							<a href="#contact" download>Contact me!</a>
 						</div><!--/.header-text-->
 					</div><!--/.col-->
@@ -751,7 +751,7 @@ Outside of the QA world, you can find me exploring new hiking trails, challengin
 									</form><!--/form-->
 								</div><!--/.contact-form-->
 								<div id="successMessage" style="display: none;">
-								Thank you for your submission!
+									Thank you for your submission!
 							</div>
 							</div><!--/.single-contact-box-->
 						</div><!--/.col-->
@@ -760,7 +760,7 @@ Outside of the QA world, you can find me exploring new hiking trails, challengin
 								<div class="contact-adress">
 									<div class="contact-add-head">
 										<h3>Get In Touch</h3>
-										<p>Software QA Enthusiastic</p>
+										<p>Founder | Ideator | Software QA Engineer</p>
 									</div>
 									<div class="contact-add-info">
 										<div class="single-contact-add-info">
@@ -834,7 +834,10 @@ Outside of the QA world, you can find me exploring new hiking trails, challengin
 
             // Reset the form
             form.reset();
+			setTimeout(function(){
 			location.reload();
+			}, 3000);
+			
         } else {
             // If form is not valid, trigger HTML5 form validation
             form.reportValidity();

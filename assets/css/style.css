@@ -488,7 +488,7 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
 }
 .timeline-content h4.title {
     font-size: 16px;
-    font-weight: 400;
+    font-weight: 600;
     text-transform: uppercase;
 }
 .timeline-content h5 {
@@ -805,7 +805,7 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
     text-transform: capitalize;
     padding: 38px 0;
 }
-.hm-footer-copyright p a {color: #888ea5;}
+.hm-footer-copyright p a {color: #0060c7;}
 /*===============================
     Scroll Top
 ===============================*/

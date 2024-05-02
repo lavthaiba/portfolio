@@ -18,6 +18,7 @@ This portfolio website includes sections for:
 - [Installation](#installation)
 - [Usage](#usage)
 - [Contributing](#contributing)
+- [Credits](#credits)
 
 ## Installation
 
@@ -39,3 +40,12 @@ Assets: The assets folder contains all the CSS, JS, images, and logos used in th
 
 ## Contributing
 Contributions are welcome! If you find any issues or have suggestions for improvements, please open an issue or submit a pull request.
+
+## Credits
+
+This portfolio website is based on the Browny template obtained from ThemeWagon, under the terms of their license. The template was customized by Lav Thaiba.
+
+For more information about the licensing terms, please refer to [ThemeWagon's license](https://themewagon.com/license/).
+
+Original Browny template: [Free HTML5 Personal Portfolio Website Template Browny](https://themewagon.com/themes/free-html5-personal-portfolio-website-template-browny/)
+

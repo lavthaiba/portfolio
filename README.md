@@ -26,6 +26,7 @@ This portfolio website includes sections for:
 
 ```bash
 git clone https://github.com/lavthaiba/portfolio.git
+## Usage
 Usage
 Navigate through different sections using the navigation bar.
 Explore Lav Thaiba's skills, experience, and profiles.
@@ -36,6 +37,7 @@ The send_mail.php file located in the root directory handles the functionality f
 Assets
 The assets folder contains all the CSS, JS, images, and logos used in the portfolio website.
 
+## Contributing
 Contributing
 Contributions are welcome! If you find any issues or have suggestions for improvements, please open an issue or submit a pull request.
 

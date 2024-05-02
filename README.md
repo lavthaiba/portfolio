@@ -16,6 +16,8 @@ This portfolio website includes sections for:
 ## Contents
 
 - [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
 
 ## Installation
 
@@ -24,7 +26,9 @@ This portfolio website includes sections for:
 ```bash
 git clone https://github.com/lavthaiba/portfolio.git
 
-Usage
+```
+
+## Usage
 Navigate through different sections using the navigation bar.
 Explore Lav Thaiba's skills, experience, and profiles.
 Use the contact form to send a message to Lav Thaiba.
@@ -33,5 +37,5 @@ send_mail.php: The send_mail.php file located in the root directory handles the 
 
 Assets: The assets folder contains all the CSS, JS, images, and logos used in the portfolio website.
 
-Contributing
+## Contributing
 Contributions are welcome! If you find any issues or have suggestions for improvements, please open an issue or submit a pull request.

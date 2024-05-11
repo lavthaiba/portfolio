@@ -19,7 +19,7 @@ $subject = htmlspecialchars($subject);
 $message = htmlspecialchars($message);
 
 // Email recipient
-$to = 'lavthaiba@gmail.com';
+$to = 'contact@lavthaiba.com.np';
 
 // Email headers
 $headers = "From: $name <$email>\r\n";

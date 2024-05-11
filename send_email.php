@@ -1,7 +1,4 @@
-
-
 <?php
-
 
 // Retrieve form data
 $name = $_POST['name'] ?? '';
@@ -9,13 +6,13 @@ $email = $_POST['email'] ?? '';
 $subject = $_POST['subject'] ?? '';
 $message = $_POST['message'] ?? '';
 
-// Validate input (example)
+// Validate input
 if (empty($name) || empty($email) || empty($subject) || empty($message)) {
     echo "Please fill in all the fields.";
     exit; // Stop further execution
 }
 
-// Sanitize input (example)
+// Sanitize input
 $name = htmlspecialchars($name);
 $email = filter_var($email, FILTER_SANITIZE_EMAIL);
 $subject = htmlspecialchars($subject);
@@ -38,15 +35,6 @@ $body .= "Message: $message<br>";
 
 // Send email
 $mail_sent = mail($to, $subject, $body, $headers);
-if($sendMail)
-{
-echo "Email Sent Successfully";
-}
-else
-
-{
-echo "Mail Failed";
-}
 
 // Check if the email was sent successfully
 if ($mail_sent) {

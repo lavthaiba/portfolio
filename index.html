@@ -17,7 +17,7 @@
 		<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&amp;subset=devanagari,latin-ext" rel="stylesheet">
         
         <!-- title of site -->
-        <title>Lav Thaiba | Founder | Software QA | Software Quality Assurance Engineer | Tester |Online Research Geek | Online Portfolio</title>
+        <title>Lav Thaiba | Founder | Software QA | Software Quality Assurance Engineer | Tester | Online Research Geek | Online Portfolio</title>
 
         <!-- For favicon png -->
 		<link rel="shortcut icon" type="image/icon" href="assets/logo/favicon.png"/>
@@ -761,6 +761,7 @@ Outside of the QA world, you can find me exploring new hiking trails, challengin
 							</div><!--/.single-contact-box-->
 						</div><!--/.col-->
 						<div class="col-md-offset-1 col-md-5 col-sm-6">
+						
 							<div class="single-contact-box">
 								<div class="contact-adress">
 									<div class="contact-add-head">
@@ -782,6 +783,7 @@ Outside of the QA world, you can find me exploring new hiking trails, challengin
 										</div>
 									</div>
 								</div><!--/.contact-adress-->
+								
 								<div class="hm-foot-icon">
 									<ul>
 										<li><a href="https://facebook.com/lavthaiba" target="_blank"><i class="fa fa-facebook"></i></a></li><!--/li-->
@@ -790,16 +792,36 @@ Outside of the QA world, you can find me exploring new hiking trails, challengin
 										<li><a href="https://instagram.com/lavthaiba" target="_blank"><i class="fa fa-instagram"></i></a></li><!--/li-->
 									</ul><!--/ul-->
 								</div><!--/.hm-foot-icon-->
+								
 							</div><!--/.single-contact-box-->
 							
 						</div><!--/.col-->
+
 					</div><!--/.row-->
+					
 				</div><!--/.contact-content-->
+				
 			</div><!--/.container-->
 
 		</section><!--/.contact-->
 		<!--contact end -->
-							
+						
+			
+<!-- Random content section -->
+<section class="random-content" style="background-color: #e7f2fd;">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <div class="random-content-box">
+                    <p id="random-content"></p>
+                    <button onclick="displayRandomContent()" class="quote">Refresh Quote</button>
+                </div>
+            </div><!--/.col-->
+        </div><!--/.row-->
+    </div><!--/.container-->
+</section><!--/.random-content-->
+		
+
 
 		<!--footer-copyright start-->
 		<footer id="footer-copyright" class="footer-copyright">
@@ -853,6 +875,35 @@ Outside of the QA world, you can find me exploring new hiking trails, challengin
         var form = document.getElementById('myForm');
         form.addEventListener("submit", submitForm);
     });
+	
+	<!-- Add this script in the <head> section or just before the closing </body> tag -->
+
+
+	var randomContent = [
+		"Quality is never an accident; it is always the result of intelligent effort. - John Ruskin",
+        "In the world of Internet Customer Service, it’s important to remember your competitor is only one mouse click away. - Doug Warner",
+        "Every time we launch a feature, people yell at us. - Angelo Sotira",
+        "The bitterness of poor quality remains long after the sweetness of low price is forgotten. - Benjamin Franklin",
+        "It's not at all important to get it right the first time. It's vitally important to get it right the last time. - Andrew Hunt and David Thomas",
+        "Software testing is a sport like hunting, it's bughunting. - Amit Kalantri",
+        "There are always better designs; the role of testing is to find them. - Thomas Gilb",
+        "The goal is to minimize the harm done to users while creating and releasing software that delivers value. - Lisa Crispin and Janet Gregory"
+		
+	];
+
+	function displayRandomContent() {
+    var randomIndex = Math.floor(Math.random() * randomContent.length);
+    var randomMessage = randomContent[randomIndex];
+    document.getElementById("random-content").innerHTML = randomMessage;
+	}
+
+
+
+    window.onload = function() {
+        displayRandomContent();
+    };
+
+
 </script>
 
 

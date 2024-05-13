@@ -1,5 +1,4 @@
 <?php
-
 // Retrieve form data
 $name = $_POST['name'] ?? '';
 $email = $_POST['email'] ?? '';

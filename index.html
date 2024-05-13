@@ -754,7 +754,7 @@ Outside of the QA world, you can find me exploring new hiking trails, challengin
 										<div class="row">
 											<div class="col-sm-12">
 												<div class="single-contact-btn">
-													<input type="submit" class="contact-btn" onclick="return submitForm();" value="Submit">
+													<input type="submit" class="contact-btn" onclick="return submitForm();" value="Submit" name="submit">
 												</div><!--/.single-single-contact-btn-->
 											</div><!--/.col-->
 										</div><!--/.row-->
@@ -865,11 +865,11 @@ Outside of the QA world, you can find me exploring new hiking trails, challengin
             document.getElementById("successMessage").style.display = "block";
 
             // Reset the form
-            
+            form.reset();
 			setTimeout(function(){
 			location.reload();
 			}, 2000);
-			form.reset();
+			
 			
         } else {
             // If form is not valid, trigger HTML5 form validation

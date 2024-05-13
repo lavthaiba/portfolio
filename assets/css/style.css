@@ -499,7 +499,7 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
 }
 .main-timeline .description {
     font-size: 14px;
-    color: #999fb3;
+    color: #505050;
 }
 .main-timeline .timeline-content.right{
     float: right;
@@ -931,5 +931,11 @@ p#random-content {
 	padding: 8px;
 	margin-top:25%;
 
+}
+
+#expbg {
+	background: url("../images/about/expbg.png");
+	background-position: center;
+	background-size: cover;
 }
 /*========================Thank you=================

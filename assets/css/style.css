@@ -492,7 +492,7 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
     text-transform: uppercase;
 }
 .timeline-content h5 {
-    color: #636a82;
+    color: #505050;;
     font-size: 14px;
     font-weight: 300;
     margin: 18px 0 20px;
@@ -938,4 +938,17 @@ p#random-content {
 	background-position: center;
 	background-size: cover;
 }
+
+#edubg {
+	background: url("../images/about/edubg.png");
+	background-position: center;
+	background-size: cover;
+}
+
+#contactbg {
+	background: url("../images/about/contactbg.png");
+	background-position: center;
+	background-size: cover;
+}
+
 /*========================Thank you=================

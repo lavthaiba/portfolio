@@ -723,7 +723,7 @@ Outside of the QA world, you can find me exploring new hiking trails, challengin
 						<div class="col-md-offset-1 col-md-5 col-sm-6">
 							<div class="single-contact-box">
 								<div class="contact-form">
-										<form id="myForm" action="https://formspree.io/f/xkndyvqg" method="post" name="form">
+										<form id="myForm" action="send_email.php" method="post" name="form">
 
 										<div class="row">
 											<div class="col-sm-6 col-xs-12">
@@ -852,7 +852,7 @@ Outside of the QA world, you can find me exploring new hiking trails, challengin
 <script>
     function submitForm(event) {
         if (event) {
-            event.preventDefault(); // Prevent default form submission
+           // event.preventDefault(); // Prevent default form submission
             var form = event.target; // Get the form element
         } else {
             return; // If event is undefined, exit function
@@ -865,7 +865,7 @@ Outside of the QA world, you can find me exploring new hiking trails, challengin
             document.getElementById("successMessage").style.display = "block";
 
             // Reset the form
-            form.reset();
+           // form.reset();
 			setTimeout(function(){
 			location.reload();
 			}, 3000);

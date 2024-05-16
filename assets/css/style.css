@@ -215,7 +215,7 @@ nav.navbar.bootsnav .navbar-toggle i{color: #007bff;}
 }
 .header-text h2 span {color: #007bff;}
 .header-text p {
-    color: #bce0ff;
+    color: #bce0ff !important;
     font-size: 20px;
     font-weight: 300;
     text-transform: uppercase;

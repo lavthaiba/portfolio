@@ -381,6 +381,16 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
     padding-bottom: 50px;
     border-bottom: 1px solid #e5ebf2;
 }
+
+.about-content h2 {
+	
+	font-size: 24px;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding-bottom: 50px;
+    border-bottom: 1px solid #e5ebf2;
+	
+}
 .single-progress-txt {
     display: flex;
 }

@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Form Exercise</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-image: url('https://p0.pikist.com/photos/479/527/background-gradation-geomatri-form-blue-the-formation-of-design-decor-decorative.jpg'); /* Replace this with your image URL */
+        background-size: cover;
+    }
+    .container {
+        width: 400px;
+        background-color: rgba(255, 255, 255, 0.8);
+        border-radius: 10px;
+        padding: 30px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        margin-bottom: 20px;
+    }
+    .container h2 {
+        text-align: center;
+        color: #333;
+        margin-bottom: 20px;
+    }
+    .form-group {
+        margin-bottom: 20px;
+    }
+    .form-group label {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+    .form-group input {
+        width: calc(100% - 22px);
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+    .btn {
+        width: 100%;
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 10px;
+    }
+    .btn:hover {
+        background-color: #0056b3;
+    }
+    .error {
+        color: red;
+        font-size: 0.8em;
+        margin-top: 5px;
+    }
+    .success {
+        color: green;
+        font-size: 0.8em;
+        margin-top: 10px;
+        text-align: center;
+        display: none;
+    }
+    #display-values {
+        margin-top: 20px;
+    }
+    .login-link {
+        text-align: center;
+        margin-top: 20px;
+    }
+    .back-button {
+        text-align: center;
+        margin-bottom: 20px;
+        margin-top: 30px;
+    }
+</style>
+
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_SharedWithUsers msdt:dt="string">Quality Assurannce -01 Vrit Technologies Members</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_SharedWithUsers>
+<mso:SharedWithUsers msdt:dt="string">7;#Quality Assurannce -01 Vrit Technologies Members</mso:SharedWithUsers>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head>
+<body>
+<div class="container" id="register-container">
+    <h2>Register for QA Session</h2>
+    <form id="register-form">
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email" required>
+            <span id="email-error" class="error"></span>
+        </div>
+        <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <span id="password-error" class="error"></span>
+        </div>
+        <div class="form-group">
+            <label for="confirm-password">Confirm Password:</label>
+            <input type="password" id="confirm-password" name="confirm-password" required>
+            <span id="password-match-error" class="error"></span>
+        </div>
+        <button type="button" class="btn" id="register-btn">Register</button>
+    </form>
+    <div id="success-message" class="success"></div>
+    <div id="display-values"></div>
+    <div class="login-link">
+        <a href="#" id="login-link">Already have an account? Login</a>
+    </div>
+</div>
+
+<div class="container" id="login-container" style="display:none;">
+    <h2>Login</h2>
+    <form id="login-form">
+        <div class="form-group">
+            <label for="login-email">Email:</label>
+            <input type="text" id="login-email" name="login-email" required>
+            <span id="login-email-error" class="error"></span>
+        </div>
+        <div class="form-group">
+            <label for="login-password">Password:</label>
+            <input type="password" id="login-password" name="login-password" required>
+            <span id="login-password-error" class="error"></span>
+        </div>
+        <button type="button" class="btn" id="login-btn">Login</button>
+    </form>
+    <div id="login-success-message" class="success"></div>
+    <div id="login-display-values"></div>
+    <div class="back-button">
+        <a href="#" id="back-to-register">Back to Register</a>
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var registeredEmail = localStorage.getItem('registeredEmail');
+        if (registeredEmail) {
+            document.getElementById('email').value = registeredEmail;
+        }
+    });
+
+    document.getElementById('register-btn').addEventListener('click', function(event) {
+        var name = document.getElementById('name').value;
+        var email = document.getElementById('email').value;
+        var password = document.getElementById('password').value;
+        var confirmPassword = document.getElementById('confirm-password').value;
+        var emailError = document.getElementById('email-error');
+        var passwordError = document.getElementById('password-error');
+        var passwordMatchError = document.getElementById('password-match-error');
+        var container = document.querySelector('.container');
+        var successMessage = document.getElementById('success-message');
+        var displayValues = document.getElementById('display-values');
+
+        emailError.textContent = '';
+        passwordError.textContent = '';
+        passwordMatchError.textContent = '';
+
+        if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+            emailError.textContent = 'Please enter a valid email address';
+            return;
+        } else if (localStorage.getItem('registeredEmail') === email) {
+            emailError.textContent = 'Email already registered';
+            return;
+        }
+
+        if (password.length < 8) {
+            passwordError.textContent = 'Password must be at least 8 characters long';
+            return;
+        }
+
+        if (password !== confirmPassword) {
+            passwordMatchError.textContent = 'Passwords do not match';
+            return;
+        }
+
+        localStorage.setItem('registeredEmail', email);
+        localStorage.setItem('registeredPassword', password);
+
+        successMessage.textContent = 'Registration successful';
+        successMessage.style.display = 'block';
+
+        displayValues.innerHTML = '<p>Name: ' + name + '</p>' +
+                                  '<p>Email: ' + email + '</p>' +
+                                  '<p>Password: ' + password + '</p>';
+        displayValues.style.display = 'block';
+
+        document.getElementById('register-form').reset();
+        document.getElementById('email').value = ''; // Clear email value
+
+        setTimeout(function() {
+            location.reload();
+        }, 200000);
+    });
+
+    document.getElementById('login-link').addEventListener('click', function(event) {
+        document.getElementById('login-container').style.display = 'block';
+        document.getElementById('register-container').style.display = 'none';
+    });
+
+    document.getElementById('back-to-register').addEventListener('click', function(event) {
+        document.getElementById('login-container').style.display = 'none';
+        document.getElementById('register-container').style.display = 'block';
+    });
+
+    document.getElementById('login-btn').addEventListener('click', function(event) {
+        var loginEmail = document.getElementById('login-email').value;
+        var loginPassword = document.getElementById('login-password').value;
+        var loginEmailError = document.getElementById('login-email-error');
+        var loginPasswordError = document.getElementById('login-password-error');
+        var loginContainer = document.getElementById('login-container');
+        var loginSuccessMessage = document.getElementById('login-success-message');
+        var loginDisplayValues = document.getElementById('login-display-values');
+
+        loginEmailError.textContent = '';
+        loginPasswordError.textContent = '';
+
+        var registeredEmail = localStorage.getItem('registeredEmail');
+        var registeredPassword = localStorage.getItem('registeredPassword');
+
+        if (loginEmail !== registeredEmail) {
+            loginEmailError.textContent = 'Email not registered';
+            return;
+        }
+
+        if (loginPassword !== registeredPassword) {
+            loginPasswordError.textContent = 'Incorrect password';
+            return;
+        }
+
+        loginSuccessMessage.textContent = 'Login successful';
+        loginSuccessMessage.style.display = 'block';
+
+        loginDisplayValues.innerHTML = '<p>Email: ' + loginEmail + '</p>';
+        loginDisplayValues.style.display = 'block';
+
+        document.getElementById('login-form').reset();
+        
+
+        setTimeout(function() {
+            location.reload();
+        }, 200000);
+    });
+    
+    window.onload = function() {
+		document.getElementById('register-form').reset();
+		document.getElementById('login-form').reset();
+		document.getElementById('email').value = ''; // Clear email value
+	};
+</script>
+
+</body>
+</html>

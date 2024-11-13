@@ -936,6 +936,10 @@ p#random-content {
 
 }
 
+.logo {
+    line-height: 5em;
+}
+
 #expbg {
 	background: url("../images/about/expbg.png");
 	background-position: center;

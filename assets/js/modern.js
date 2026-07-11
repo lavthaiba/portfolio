@@ -41,7 +41,7 @@ interactables.forEach(el => {
 // Animated Typewriter
 const typeTarget = document.querySelector('.typewriter');
 if (typeTarget) {
-    const roles = ["Security Automation Expert", "Penetration Tester", "QA Innovator", "Founder"];
+    const roles = ["QA Architect & Innovator", "Test Automation Expert", "Security & Pen Tester", "Senior QA Engineer"];
     let roleIndex = 0;
     let charIndex = 0;
     let isDeleting = false;
